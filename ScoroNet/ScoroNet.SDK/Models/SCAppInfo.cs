@@ -21,5 +21,12 @@ namespace ScoroNet.SDK.Models
         public SCClientKeys ClientKeys { get; set; }
 
         public bool ReadOnly { get; set; }
+
+        public SCACLInfo ACLPublic { get; set; }
+        public SCAppSettings Settings { get; set; }
+        public SCAppStorage Storage { get; set; }
+
+        public string NPM { get; set; }
+        public string StringID { get; set; }
     }
 }
