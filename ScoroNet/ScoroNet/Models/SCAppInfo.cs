@@ -1,31 +1,58 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Newtonsoft.Json;
 
 namespace ScoroNet.Models
 {
     public class SCAppInfo
     {
-        public string ID { get; set; }
-        public string AppID { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public string UserID { get; set; }
-        public string ServerID { get; set; }
-        public int MyProperty { get; set; }
+        [JsonProperty("_id")]
+        public string ID { get; private set; }
 
-        public SCAppLimits Limits { get; set; }
-        public SCCollections Schemas { get; set; }
-        public SCAccessKeys AccessKeys { get; set; }
-        public SCClientKeys ClientKeys { get; set; }       
+        [JsonProperty("appId")]
+        public string AppID { get; private set; }
 
-        public SCACLInfo ACLPublic { get; set; }
-        public SCAppSettings Settings { get; set; }
-        public SCAppStorage Storage { get; set; }
+        [JsonProperty("name")]
+        public string Name { get; private set; }
 
-        public string NPM { get; set; }
-        public string StringID { get; set; }
+        [JsonProperty("description")]
+        public string Description { get; private set; }
 
-        public bool ReadOnly { get; set; }
+        [JsonProperty("userId")]
+        public string UserID { get; private set; }
+
+        [JsonProperty("serverId")]
+        public string ServerID { get; private set; }
+
+        [JsonProperty("limits")]
+        public SCAppLimits Limits { get; private set; }
+
+        [JsonProperty("schemas")]
+        public SCCollections Schemas { get; private set; }
+
+        [JsonProperty("accessKeys")]
+        public SCAccessKeys AccessKeys { get; private set; }
+
+        [JsonProperty("clientKeys")]
+        public SCClientKeys ClientKeys { get; private set; }
+
+        [JsonProperty("ACLPublic")]
+        public SCACLInfo<bool> ACLPublic { get; private set; }
+
+        [JsonProperty("settings")]
+        public SCAppSettings Settings { get; private set; }
+
+        [JsonProperty("storage")]
+        public SCAppStorage Storage { get; private set; }
+
+        [JsonProperty("npm")]
+        public string NPM { get; private set; }
+
+        [JsonProperty("stringId")]
+        public string StringID { get; private set; }
+
+        [JsonProperty("reedonly")]
+        public bool ReadOnly { get; private set; }
     }
 }

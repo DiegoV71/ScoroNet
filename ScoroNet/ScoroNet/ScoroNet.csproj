@@ -43,7 +43,6 @@
     <Compile Include="Core\ScoroCode.cs" />
     <Compile Include="Helpers\RequestHelper.cs" />
     <Compile Include="Models\SCAccessKeys.cs" />
-    <Compile Include="Models\SCACL.cs" />
     <Compile Include="Models\SCACLInfo.cs" />
     <Compile Include="Models\SCAppInfo.cs" />
     <Compile Include="Models\SCAppLimits.cs" />

@@ -22,7 +22,14 @@ namespace ScoroNet.Core
             };
         }
 
-        public AppManager App => app ?? new AppManager(AuthKey);
+        public AppManager App
+        {
+            get
+            {
+                app = app ?? new AppManager(AuthKey);
+                return app;
+            }
+        }
 
         public static ScoroCode Init(string appKey, string clientKey, string accessKey)
         {

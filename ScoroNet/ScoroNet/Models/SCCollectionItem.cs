@@ -7,7 +7,7 @@ namespace ScoroNet.Models
         public string ID { get; set; }
         public string Name { get; set; }
         public bool UseDocsACL { get; set; }
-        public SCACL ACL { get; set; }
+        public SCACLInfo<string[]> ACL { get; set; }
         public SCField[] Fields { get; set; }
         public bool System { get; set; }
         public bool Notify { get; set; }

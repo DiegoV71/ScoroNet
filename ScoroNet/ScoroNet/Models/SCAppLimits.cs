@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,12 +7,25 @@ namespace ScoroNet.Models
 {
     public class SCAppLimits
     {
-        public int RPS { get; set; }
-        public float Store { get; set; }
-        public int PushValue { get; set; }
-        public int PushUsed { get; set; }
-        public int Developers { get; set; }
-        public int WS { get; set; }
-        public int ScroptTimeout { get; set; }
+        [JsonProperty("rps")]
+        public int RPS { get; private set; }
+
+        [JsonProperty("store")]
+        public float Store { get; private set; }
+
+        [JsonProperty("pushValue")]
+        public int PushValue { get; private set; }
+
+        [JsonProperty("pushUsed")]
+        public int PushUsed { get; private set; }
+
+        [JsonProperty("developers")]
+        public int Developers { get; private set; }
+
+        [JsonProperty("ws")]
+        public int WS { get; private set; }
+
+        [JsonProperty("scriptTimeout")]
+        public int ScriptTimeout { get; private set; }
     }
 }

@@ -6,6 +6,6 @@ namespace ScoroNet.Core
     public class SCAppResponse : SCResponse
     {
         [JsonProperty("app")]
-        public SCAppInfo AppInfo { get; set; }
+        public SCAppInfo AppInfo { get; private set; }
     }
 }

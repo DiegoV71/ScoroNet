@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,10 +7,19 @@ namespace ScoroNet.Models
 {
     public class SCAccessKeys
     {
-        public string FileKey { get; set; }
-        public string MasterKey { get; set; }
-        public string MessageKey { get; set; }
-        public string ScriptKey { get; set; }
-        public string WebSocketKey { get; set; }
+        [JsonProperty("fileKey")]
+        public string FileKey { get; private set; }
+
+        [JsonProperty("masterKey")]
+        public string MasterKey { get; private set; }
+
+        [JsonProperty("messageKey")]
+        public string MessageKey { get; private set; }
+
+        [JsonProperty("scriptKey")]
+        public string ScriptKey { get; private set; }
+
+        [JsonProperty("websocketKey")]
+        public string WebSocketKey { get; private set; }
     }
 }
