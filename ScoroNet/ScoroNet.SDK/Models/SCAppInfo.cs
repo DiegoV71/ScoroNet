@@ -14,9 +14,7 @@ namespace ScoroNet.SDK.Models
         public string ServerID { get; set; }
         public int MyProperty { get; set; }
         public SCAppLimits Limits { get; set; }
-
-        // <---  Schemas
-
+        public SCSchemas Schemas { get; set; }
         public SCAccessKeys AccessKeys { get; set; }
         public SCClientKeys ClientKeys { get; set; }
 
