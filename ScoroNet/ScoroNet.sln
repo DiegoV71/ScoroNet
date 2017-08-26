@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+VisualStudioVersion = 15.0.26730.10
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScoroNet", "ScoroNet\ScoroNet.csproj", "{DE5ED895-B0E3-45F1-B46E-6ACF5C8DA69D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScoroNet.Demo", "ScoroNet\ScoroNet.Demo.csproj", "{DE5ED895-B0E3-45F1-B46E-6ACF5C8DA69D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScoroNet.SDK", "ScoroNet.SDK\ScoroNet.SDK.csproj", "{00B2A2A8-20A7-41B0-9BE6-86F5D5C7931A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +17,15 @@ Global
 		{DE5ED895-B0E3-45F1-B46E-6ACF5C8DA69D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE5ED895-B0E3-45F1-B46E-6ACF5C8DA69D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE5ED895-B0E3-45F1-B46E-6ACF5C8DA69D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00B2A2A8-20A7-41B0-9BE6-86F5D5C7931A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00B2A2A8-20A7-41B0-9BE6-86F5D5C7931A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00B2A2A8-20A7-41B0-9BE6-86F5D5C7931A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00B2A2A8-20A7-41B0-9BE6-86F5D5C7931A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {455BA6B1-1DF3-4052-AB08-2568CCE580FC}
 	EndGlobalSection
 EndGlobal
