@@ -13,12 +13,11 @@ namespace ScoroNet.SDK.Models
         public string UserID { get; set; }
         public string ServerID { get; set; }
         public int MyProperty { get; set; }
+
         public SCAppLimits Limits { get; set; }
         public SCSchemas Schemas { get; set; }
         public SCAccessKeys AccessKeys { get; set; }
-        public SCClientKeys ClientKeys { get; set; }
-
-        public bool ReadOnly { get; set; }
+        public SCClientKeys ClientKeys { get; set; }       
 
         public SCACLInfo ACLPublic { get; set; }
         public SCAppSettings Settings { get; set; }
@@ -26,5 +25,7 @@ namespace ScoroNet.SDK.Models
 
         public string NPM { get; set; }
         public string StringID { get; set; }
+
+        public bool ReadOnly { get; set; }
     }
 }
