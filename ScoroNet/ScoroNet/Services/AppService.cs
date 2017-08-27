@@ -1,12 +1,8 @@
-﻿using System;
+﻿using ScoroNet.Core;
+using ScoroNet.Helpers;
 using System.Collections.Generic;
-using System.Text;
-using ScoroNet.Models;
 
 using static ScoroNet.Core.SCConst;
-using ScoroNet.Core;
-using System.Collections.Specialized;
-using ScoroNet.Helpers;
 
 namespace ScoroNet.Services
 {

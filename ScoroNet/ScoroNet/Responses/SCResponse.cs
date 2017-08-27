@@ -1,14 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 
 namespace ScoroNet.Core
 {
-    public abstract class SCResponse
+    public class SCResponse
     {
+        [JsonProperty("error")]
         public bool Error { get; set; }
+
+        [JsonProperty("errCode")]
         public int ErrorCode { get; set; }
+
+        [JsonProperty("errMsg")]
         public string ErrorMessage { get; set; }
+
+        public static implicit operator bool(SCResponse response) => !response.Error;
     }
 }

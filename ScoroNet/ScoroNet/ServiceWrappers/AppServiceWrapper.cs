@@ -1,11 +1,7 @@
 ﻿using ScoroNet.Core;
-using ScoroNet.Models;
+using ScoroNet.Helpers;
 using ScoroNet.Services;
-using System;
-using System.Collections.Generic;
-using System.IO;
 using System.Net;
-using System.Text;
 
 namespace ScoroNet.ServiceWrappers
 {
@@ -17,21 +13,9 @@ namespace ScoroNet.ServiceWrappers
             {
                 return GetAppInfo(keys);
             }
-            catch (WebException e)
+            catch (WebException ex)
             {
-                var stream = e.Response.GetResponseStream();
-                var respons = string.Empty;
-                using (var reader = new StreamReader(stream))
-                {
-                    respons = reader.ReadToEnd();
-                }
-
-                return null;
-            }
-            catch (Exception e)
-            {
-
-                return null;
+                return (SCAppResponse)RequestExceptionHelper.FillRequestError(ex);
             }
         }
     }

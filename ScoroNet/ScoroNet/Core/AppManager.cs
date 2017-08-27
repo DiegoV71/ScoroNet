@@ -1,26 +1,17 @@
-﻿using ScoroNet.Models;
-using ScoroNet.ServiceWrappers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ScoroNet.ServiceWrappers;
 
 namespace ScoroNet.Core
 {
     public class AppManager
     {
         SCAuthKey authKeys;
+        AppServiceWrapper wrapper = new AppServiceWrapper();
 
         public AppManager(SCAuthKey authKeys)
         {
             this.authKeys = authKeys;
         }
 
-        public SCAppResponse GetAppInfo()
-        {
-            var wrapper = new AppServiceWrapper();
-            return wrapper.TryGetAppInfo(authKeys);
-        }
+        public SCAppResponse GetAppInfo() => wrapper.TryGetAppInfo(authKeys);
     }
 }

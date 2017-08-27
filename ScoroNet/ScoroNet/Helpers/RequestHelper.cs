@@ -1,25 +1,19 @@
-﻿using System;
+﻿using Newtonsoft.Json;
 using System.Collections.Generic;
-using System.Text;
-using System.Collections.Specialized;
-using System.Net;
-using Newtonsoft.Json;
-using System.Linq;
 using System.IO;
+using System.Net;
 
 namespace ScoroNet.Helpers
 {
-    public static class RequestHelper
+    static class RequestHelper
     {
         public static T Get<T>(string url, Dictionary<string, string> args)
         {
             var request = HttpWebRequest.CreateHttp(url);
             request.Method = "POST";
             request.ContentType = "application/json";
-            request.Host = "api.scorocode.ru";
 
-            var parameters = JsonConvert.SerializeObject(args);
-            
+            var parameters = JsonConvert.SerializeObject(args);            
 
             using (var writer = new StreamWriter(request.GetRequestStream()))
             {

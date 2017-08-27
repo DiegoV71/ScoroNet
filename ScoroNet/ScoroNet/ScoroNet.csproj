@@ -34,13 +34,14 @@
       <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\AppManager.cs" />
+    <Compile Include="Core\AuthManager.cs" />
     <Compile Include="Core\SCAuthKey.cs" />
     <Compile Include="Core\SCConst.cs" />
     <Compile Include="Core\ScoroCode.cs" />
+    <Compile Include="Helpers\RequestExceptionHelper.cs" />
     <Compile Include="Helpers\RequestHelper.cs" />
     <Compile Include="Models\SCAccessKeys.cs" />
     <Compile Include="Models\SCACLInfo.cs" />
@@ -48,12 +49,15 @@
     <Compile Include="Models\SCAppLimits.cs" />
     <Compile Include="Models\SCAppSettings.cs" />
     <Compile Include="Models\SCAppStorage.cs" />
+    <Compile Include="Models\SCBaseUser.cs" />
     <Compile Include="Models\SCClientKeys.cs" />
     <Compile Include="Models\SCCollectionItem.cs" />
     <Compile Include="Models\SCCollections.cs" />
     <Compile Include="Models\SCField.cs" />
     <Compile Include="Models\SCMailTemplate.cs" />
     <Compile Include="Models\SCMailTemplates.cs" />
+    <Compile Include="Models\SCUser.cs" />
+    <Compile Include="Responses\SCLoginResponse.cs" />
     <Compile Include="Responses\SCTriggersResponse.cs" />
     <Compile Include="Responses\SCFieldResponse.cs" />
     <Compile Include="Responses\SCCollectionResponse.cs" />
@@ -64,7 +68,9 @@
     <Compile Include="Models\SCTriggerInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AppService.cs" />
+    <Compile Include="Services\AuthService.cs" />
     <Compile Include="ServiceWrappers\AppServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\AuthServiceWrapper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

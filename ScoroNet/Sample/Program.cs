@@ -1,12 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using ScoroNet.Core;
+using Newtonsoft.Json;
+using ScoroNet.Models;
 
 namespace Sample
 {
+    class MyUser : SCBaseUser
+    {
+        [JsonProperty("test")]
+        public string Test { get; set; }
+    }
+
     class Program
     {
         static void Main(string[] args)
@@ -15,7 +19,11 @@ namespace Sample
             var clientKey = "b0d725adde704dcb87cb39fc7e5ea9b2";
             var accessKey = "a19b04edd00347f2b0ce4a07c55fb8b6";
             var service = ScoroCode.Init(appKey, clientKey, accessKey);
-            var info = service.App.GetAppInfo();
+            var login = service.Auth.Login<MyUser>("test@mail.ru", "kekus228");
+
+            if (!login)
+                Console.WriteLine("Register error: {0}", login.ErrorMessage);
+            else Console.WriteLine("Login success : {0}", login.User.User.UserName);
 
             Console.ReadKey();
         }

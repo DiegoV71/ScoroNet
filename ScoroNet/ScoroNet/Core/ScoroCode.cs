@@ -1,16 +1,11 @@
-﻿using ScoroNet.Models;
-using ScoroNet.ServiceWrappers;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ScoroNet.Core
+﻿namespace ScoroNet.Core
 {
     public class ScoroCode
     {
         public readonly SCAuthKey AuthKey;
 
-        AppManager app;
+        AppManager appManager;
+        AuthManager authManager;
 
         private ScoroCode(string appKey, string clientKey, string accessKey)
         {
@@ -22,12 +17,20 @@ namespace ScoroNet.Core
             };
         }
 
+        public AuthManager Auth
+        {
+            get
+            {
+                authManager = authManager ?? new AuthManager(AuthKey);
+                return authManager;
+            }
+        }
         public AppManager App
         {
             get
             {
-                app = app ?? new AppManager(AuthKey);
-                return app;
+                appManager = appManager ?? new AppManager(AuthKey);
+                return appManager;
             }
         }
 
