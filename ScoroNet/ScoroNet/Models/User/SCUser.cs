@@ -1,13 +1,13 @@
 ﻿using Newtonsoft.Json;
 
-namespace ScoroNet.Models
+namespace ScoroNet.Models.User
 {
-    public class SCUser<T> where T : SCBaseUser
+    public class SCUser<T> where T : SCUserInfo
     {
         [JsonProperty("sessionId")]
         public string SessionID { get; set; }
 
         [JsonProperty("user")]
-        public T User { get; set; }
+        public T UserInfo { get; set; }
     }
 }

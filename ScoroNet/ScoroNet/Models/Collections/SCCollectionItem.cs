@@ -1,6 +1,7 @@
-﻿using System;
+﻿using ScoroNet.Models.App;
+using System;
 
-namespace ScoroNet.Models
+namespace ScoroNet.Models.Collections
 {
     public class SCCollectionItem
     {

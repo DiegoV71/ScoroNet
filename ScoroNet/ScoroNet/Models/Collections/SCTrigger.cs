@@ -1,4 +1,4 @@
-﻿namespace ScoroNet.Models
+﻿namespace ScoroNet.Models.Collections
 {
     public class SCTrigger
     {

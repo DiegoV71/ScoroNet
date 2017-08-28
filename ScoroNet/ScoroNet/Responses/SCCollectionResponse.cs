@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using ScoroNet.Models;
+using ScoroNet.Models.Collections;
 
 namespace ScoroNet.Core
 {

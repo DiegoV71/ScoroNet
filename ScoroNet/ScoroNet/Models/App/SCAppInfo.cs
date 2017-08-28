@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
+using ScoroNet.Models.Collections;
 
-namespace ScoroNet.Models
+namespace ScoroNet.Models.App
 {
     public class SCAppInfo
     {

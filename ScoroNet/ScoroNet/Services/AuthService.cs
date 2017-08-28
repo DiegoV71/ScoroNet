@@ -1,7 +1,6 @@
 ﻿using ScoroNet.Core;
 using ScoroNet.Helpers;
-using ScoroNet.Models;
-using ScoroNet.Responses;
+using ScoroNet.Models.User;
 using System;
 using System.Collections.Generic;
 
@@ -31,7 +30,7 @@ namespace ScoroNet.Services
             return RequestHelper.Get<SCResponse>(url, values);
         }
 
-        protected SCLoginResponse<T> Login<T>(SCAuthKey keys, string email, string password) where T : SCBaseUser
+        protected SCLoginResponse<T> Login<T>(SCAuthKey keys, string email, string password) where T : SCUserInfo
         {
             var url = Host + "/login";
 

@@ -1,7 +1,6 @@
 ﻿using ScoroNet.Core;
 using ScoroNet.Helpers;
-using ScoroNet.Models;
-using ScoroNet.Responses;
+using ScoroNet.Models.User;
 using ScoroNet.Services;
 using System.Net;
 
@@ -21,7 +20,7 @@ namespace ScoroNet.ServiceWrappers
             }
         }
 
-        public SCLoginResponse<T> TryLogin<T>(SCAuthKey keys, string email, string password) where T : SCBaseUser
+        public SCLoginResponse<T> TryLogin<T>(SCAuthKey keys, string email, string password) where T : SCUserInfo
         {
             try
             {

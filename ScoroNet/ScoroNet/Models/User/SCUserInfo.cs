@@ -1,9 +1,9 @@
 ﻿using Newtonsoft.Json;
 using System;
 
-namespace ScoroNet.Models
+namespace ScoroNet.Models.User
 {
-    public class SCBaseUser
+    public class SCUserInfo
     {
         [JsonProperty("_id")]
         public string ID { get; set; }

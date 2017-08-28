@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace ScoroNet.Models
+namespace ScoroNet.Models.App
 {
     public class SCAppLimits
     {
