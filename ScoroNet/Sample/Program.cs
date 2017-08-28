@@ -2,10 +2,11 @@
 using ScoroNet.Core;
 using Newtonsoft.Json;
 using ScoroNet.Models;
+using ScoroNet.Models.User;
 
 namespace Sample
 {
-    class MyUser : SCBaseUser
+    class MyUser : SCUserInfo
     {
         [JsonProperty("test")]
         public string Test { get; set; }
@@ -23,7 +24,7 @@ namespace Sample
 
             if (!login)
                 Console.WriteLine("Register error: {0}", login.ErrorMessage);
-            else Console.WriteLine("Login success : {0}", login.User.User.UserName);
+            else Console.WriteLine("Login success : {0}", login.User.UserInfo.UserName);
 
             Console.ReadKey();
         }

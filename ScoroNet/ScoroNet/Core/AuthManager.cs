@@ -1,6 +1,6 @@
 ﻿using ScoroNet.Models;
 using ScoroNet.Models.User;
-using ScoroNet.Responses;
+using ScoroNet.Core;
 using ScoroNet.ServiceWrappers;
 
 namespace ScoroNet.Core
