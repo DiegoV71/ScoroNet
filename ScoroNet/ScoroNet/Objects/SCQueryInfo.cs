@@ -6,7 +6,18 @@ using System.Threading.Tasks;
 
 namespace ScoroNet.Objects
 {
-    class SCQueryInfo
+    public class SCQueryInfo
     {
+        public Dictionary<string, object> Tree = new Dictionary<string, object>();
+
+        public void AddNode(string field,  object value)
+        {
+            if (!Tree.ContainsKey(field))
+            {
+                Tree.Add(field, value);
+                return;
+            }
+            Tree[field] = value;
+        }
     }
 }
